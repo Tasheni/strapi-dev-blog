@@ -1,13 +1,3 @@
-/* import { Strapi } from "@strapi/strapi";
-
- export default ({ strapi }: { strapi: Strapi }) => ({
-  getPublicRepos() {
-    console.log("Service method is called");
-    return "With concurrently!!! 🚀";
-  }
- 
-}); */
-
 import { Strapi } from "@strapi/strapi";
 import { request } from "@octokit/request";
 import axios from "axios";
@@ -60,6 +50,7 @@ export default ({ strapi }: { strapi: Strapi }) => ({
               projectId: relatedProjectid,
             };
           } catch (axiosError) {
+            //console.log(result)
             return {
               id,
               name,
